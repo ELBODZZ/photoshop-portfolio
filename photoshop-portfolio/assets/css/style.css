@@ -1,0 +1,116 @@
+:root {
+  --primary: #0F0F0F;
+  --secondary: #1A1A1A;
+  --accent1: #5A00FF;
+  --accent2: #00C2FF;
+  --text-main: #FFFFFF;
+  --text-muted: #BDBDBD;
+  --border: #2A2A2A;
+  --highlight: #00FF9D;
+}
+
+body {
+  background-color: var(--primary);
+  color: var(--text-main);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.bg-dark { background-color: var(--primary) !important; }
+.text-muted { color: var(--text-muted) !important; }
+.border-muted { border-color: var(--border) !important; }
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  border: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  box-shadow: 0 0 15px rgba(90, 0, 255, 0.6),
+              0 0 25px rgba(0, 194, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.navbar {
+  background-color: rgba(15, 15, 15, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.navbar-brand, .nav-link {
+  color: var(--text-main) !important;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-link:hover, .nav-link.active {
+  color: var(--highlight) !important;
+}
+.text-accent { color: var(--accent2); }
+
+.hero {
+  background: radial-gradient(circle at center, #151515 0%, var(--primary) 100%);
+}
+
+.text-highlight {
+  color: var(--highlight);
+  position: relative;
+}
+.text-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: rgba(0, 255, 157, 0.2);
+  z-index: -1;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--secondary) !important;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+#categoryFilters .btn, #subcategoryFilters .btn {
+  border-color: var(--border);
+  color: var(--text-muted);
+}
+#categoryFilters .btn.active, #subcategoryFilters .btn.active {
+  background: linear-gradient(90deg, var(--accent1), var(--accent2));
+  color: white;
+}
+
+.modal-content {
+  background-color: var(--secondary);
+}
+.card-img-top {
+  width: 100%;
+  height: auto !important;
+  object-fit: cover;
+}
+.card {
+  height: auto !important;
+  background-color: #1A1A1A !important;
+}
+
+/* تغيير لون زر القائمة (Toggler) */
+.navbar-toggler {
+  border-color: #5A00FF !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%235A00FF' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* لون الزر عند التحويم */
+.navbar-toggler:hover {
+  border-color: #00C2FF !important;
+}
+
+.navbar-toggler:hover .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%2300C2FF' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
